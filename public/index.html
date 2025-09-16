@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Réservations - Prototype</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Réservations d'hôtel — Prototype</h1>
+
+    <section id="rooms-section">
+      <h2>Chambres (info)</h2>
+      <div id="rooms"></div>
+    </section>
+
+    <section id="reserve">
+      <h2>Rechercher et créer une réservation</h2>
+
+      <form id="searchForm">
+        <div class="row">
+          <label>Check-in <input name="checkIn" id="searchCheckIn" type="date" required /></label>
+          <label>Check-out <input name="checkOut" id="searchCheckOut" type="date" required /></label>
+          <div class="row" style="align-items:flex-end;">
+            <button type="submit" id="searchBtn">Vérifier disponibilités</button>
+          </div>
+        </div>
+      </form>
+
+      <form id="reservationForm">
+        <div class="row">
+          <label>Nom <input name="name" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
+          <label>Téléphone <input name="phone" /></label>
+        </div>
+        <div class="row">
+          <label>Chambre 
+            <select name="roomId" id="roomSelect" required>
+              <option value="">-- sélectionnez après recherche --</option>
+            </select>
+          </label>
+          <label>Check-in <input name="checkIn" id="resCheckIn" type="date" required /></label>
+          <label>Check-out <input name="checkOut" id="resCheckOut" type="date" required /></label>
+        </div>
+        <button type="submit">Réserver</button>
+      </form>
+    </section>
+
+    <section id="reservations-section">
+      <h2>Réservations récentes</h2>
+      <div id="reservations"></div>
+    </section>
+  </main>
+  <script src="/main.js"></script>
+</body>
+</html>
